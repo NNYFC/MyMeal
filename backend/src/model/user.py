@@ -1,8 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-
 from backend.src.model.role import *
 from backend.src.model.restaurant import *
-
+from backend.src.model.command import *
 
 # Base = declarative_base()
 
@@ -22,4 +21,6 @@ class User(Base):
 
     # Define the one-to-many relationship with Restaurant
     restaurant = relationship("Restaurant", back_populates="user")
+    # Define the one-to-many relationship with Command
+    command = relationship("Command", back_populates="user")
 
