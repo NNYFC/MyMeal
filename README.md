@@ -20,3 +20,5 @@ Inorder to run the backend, first ensure to be inside the **backend** folder
 <br> `cd backend`
 <br> Then run
 <br> ` uvicorn application:application --reload`
+<br><br>
+![img.png](img.png)
