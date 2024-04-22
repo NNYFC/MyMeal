@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
 from backend.src.dto.restaurant_dto import RestaurantDto
-from backend.src.model.restaurant import Restaurant
+from backend.src.model.db_models import Restaurant
 
 
 def get_restaurants(db: Session, skip: int = 0, limit: int = 10):

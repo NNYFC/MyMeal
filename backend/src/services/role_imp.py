@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
 from backend.src.dto.role_dto import RoleDto
-from backend.src.model.role import Role
+from backend.src.model.db_models import Role
 
 
 def get_role_by_name(db: Session, name: str):

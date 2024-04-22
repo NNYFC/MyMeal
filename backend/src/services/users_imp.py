@@ -2,7 +2,7 @@ import bcrypt
 from sqlalchemy.orm import Session
 
 from backend.src.dto import user_dto
-from backend.src.model.user import User
+from backend.src.model.db_models import User
 from backend.src.services.role_imp import get_role_by_name
 
 
