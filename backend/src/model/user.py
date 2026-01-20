@@ -1,9 +1,10 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-from backend.src.model.role import *
+
 from backend.src.model.restaurant import *
 from backend.src.model.command import *
+from backend.src.model.role import *
 
-# Base = declarative_base()
+Base = declarative_base()
 
 
 class User(Base):

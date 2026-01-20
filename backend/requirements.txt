@@ -4,3 +4,9 @@ SQLAlchemy
 psycopg2
 pyjwt
 bcrypt
+httpx
+# Basic oauth2 security
+python-multipart
+# oauth2 dependencies for advanced security
+python-jose[cryptography]
+passlib[bcrypt]

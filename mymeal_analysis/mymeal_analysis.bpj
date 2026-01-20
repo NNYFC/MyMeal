@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{FBBBC001-0CD8-4DF7-86BB-7E23F93A4621}" Loaded="No" Name="mymeal_analysis" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="mymeal_analysis.prj"/>
+		<Model Expanded="Yes" ID="{1B470BF8-9115-493E-A004-1412F54F888E}" Loaded="No" Name="validation_engine" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="/Users/NWAL/Documents/PKFOKAM/Project/CBS/doc/validation_engine.moo"/>
+		<Model Expanded="Yes" ID="{1B470BF8-9115-493E-A004-1412F54F888E}" Loaded="No" Name="validation_engine" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="/Users/NWAL/Documents/PKFOKAM/Project/CBS/doc/validation_engine.moo"/>
+		<Model Expanded="Yes" ID="{26B31C8B-83A4-49DC-BE2A-970516B5CD07}" Loaded="No" Name="Validation flow" Type="{5215C79E-A9A1-4738-A627-36DA432EFE29}" URL="/Users/NWAL/Documents/PKFOKAM/Project/CBS/doc/Validation flow.mae"/>
+		<Model Expanded="Yes" ID="{C7034347-66B6-4019-A0AA-1956BAE1F2C3}" Name="Driptrip Analysis" Selected="Yes" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="/Users/NWAL/Documents/Mytech/Driptrip_backend/Driptrip Analysis/Driptrip Analysis.prj"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>

@@ -1,8 +1,9 @@
 from sqlalchemy.orm import relationship
 
-from backend.src.model.restaurant import *
 from backend.src.model.command import *
+from backend.src.model.restaurant import *
 
+Base = declarative_base()
 
 class Dish(Base):
     __tablename__ = "dish"

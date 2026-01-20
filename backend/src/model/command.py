@@ -1,8 +1,10 @@
 from sqlalchemy import Boolean, DateTime
 
-from backend.src.model.dish import *
 from backend.src.model.user import *
+from backend.src.model.dish import *
 
+
+Base = declarative_base()
 
 class Command(Base):
     __tablename__ = "command"

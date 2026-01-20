@@ -1,3 +1,5 @@
+from typing import Annotated
+
 import uvicorn
 from fastapi import FastAPI, Request, HTTPException, Depends
 from sqlalchemy.orm import declarative_base, sessionmaker, Session
@@ -7,6 +9,7 @@ from backend.src.services import users_imp, role_imp
 from backend.src.config.database_config import Settings, DbConnection
 from backend.src.dto import user_dto, role_dto
 from backend.src.utils.exceptions import UnicornException
+from fastapi.security import OAuth2PasswordBearer
 
 settings = Settings()
 Base = declarative_base()
@@ -18,10 +21,10 @@ def get_db():
     db_session = sessionmaker(bind=db_connect)
     session = db_session()
     try:
-        for name in ['ADMIN', 'CLIENT', 'OWNER']:
-            role = role_imp.get_role_by_name(db=session, name=name)
-            if not role:
-                role_imp.create_role(db=session, role=role_dto.RoleDto(name=name))
+        # for name in ['ADMIN', 'CLIENT', 'OWNER']:
+        #     role = role_imp.get_role_by_name(db=session, name=name)
+        #     if not role:
+        #         role_imp.create_role(db=session, role=role_dto.RoleDto(name=name))
         yield session
     finally:
         session.close()
@@ -37,6 +40,13 @@ def start_application():
 
 
 application = start_application()
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+
+@application.get("/items/")
+async def read_items(token: Annotated[str, Depends(oauth2_scheme)]):
+    return {"token": token}
 
 
 @application.get("/")
